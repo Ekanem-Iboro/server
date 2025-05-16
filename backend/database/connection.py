@@ -3,22 +3,6 @@ import psycopg2
 import psycopg2.extras
 from ..config import DB_CONFIG
 
-# def get_connection():
-#     """
-#     Create and return a connection to the PostgreSQL database.
-#     """
-#     try:
-#         conn = psycopg2.connect(
-#             user=DB_CONFIG['user'],
-#             password=DB_CONFIG['password'],
-#             host=DB_CONFIG['host'],
-#             port=DB_CONFIG['port'],
-#             database=DB_CONFIG['database']
-#         )
-#         return conn
-#     except Exception as e:
-#         print(f"Error connecting to PostgreSQL database: {e}")
-#         raise
 def get_connection():
     """
     Create and return a connection to the PostgreSQL database with retry logic.
@@ -34,14 +18,14 @@ def get_connection():
 
     while retry_count < max_retries:
         try:
-            # Add sslmode=require for secure connections to hosted databases
+            # Connect using Supabase connection parameters
             conn = psycopg2.connect(
                 user=DB_CONFIG['user'],
                 password=DB_CONFIG['password'],
                 host=DB_CONFIG['host'],
                 port=DB_CONFIG['port'],
                 database=DB_CONFIG['database'],
-                sslmode='require'
+                sslmode='require'  # Required for Supabase
             )
             print(f"Database connection successful to {DB_CONFIG['host']}")
             return conn
@@ -138,5 +122,6 @@ def create_tables():
     finally:
         if conn:
             conn.close()
+
 
 
