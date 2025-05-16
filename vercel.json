@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "DB_USER": "@db_user",
+    "DB_PASSWORD": "@db_password",
+    "DB_NAME": "@db_name",
+    "DB_HOST": "@db_host",
+    "DB_PORT": "@db_port",
+    "JWT_SECRET": "@jwt_secret",
+    "JWT_EXPIRY": "@jwt_expiry",
+    "RATE_LIMIT": "@rate_limit"
+  }
+}
