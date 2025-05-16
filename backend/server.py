@@ -182,7 +182,14 @@ def run_server():
     """
     try:
         # Create database tables
-        create_tables()
+        print("Initializing database...")
+        tables_created = create_tables()
+
+        if tables_created:
+            print("Database tables created or verified successfully")
+        else:
+            print("WARNING: Database tables could not be created or verified")
+            print("The server will start, but some functionality may not work correctly")
 
         # Start the server
         server_address = (SERVER_CONFIG['host'], SERVER_CONFIG['port'])
