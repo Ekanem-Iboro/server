@@ -13,10 +13,10 @@
     }
   ],
   "env": {
-    "DB_USER": "neondb_owner",
-    "DB_PASSWORD": "npg_YJHzm7FQrv2U",
-    "DB_NAME": "phone_tracked",
-    "DB_HOST": "ep-proud-bird-a42u7c6a-pooler.us-east-1.aws.neon.tech",
+    "DB_USER": "postgres.ypifadnzogapurytunmv",
+    "DB_PASSWORD": "ekanemiboro121",
+    "DB_NAME": "postgres",
+    "DB_HOST": "aws-0-eu-west-2.pooler.supabase.com",
     "DB_PORT": "5432",
     "JWT_SECRET": "Ej8p$2xK!7mLqZ@5vNfR*tYbAc3DgW6H9sTuV4X",
     "JWT_EXPIRY": "1440",
