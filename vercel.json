@@ -13,13 +13,13 @@
     }
   ],
   "env": {
-    "DB_USER": "@db_user",
-    "DB_PASSWORD": "@db_password",
-    "DB_NAME": "@db_name",
-    "DB_HOST": "@db_host",
-    "DB_PORT": "@db_port",
-    "JWT_SECRET": "@jwt_secret",
-    "JWT_EXPIRY": "@jwt_expiry",
-    "RATE_LIMIT": "@rate_limit"
+    "DB_USER": "neondb_owner",
+    "DB_PASSWORD": "npg_YJHzm7FQrv2U",
+    "DB_NAME": "phone_tracked",
+    "DB_HOST": "ep-proud-bird-a42u7c6a-pooler.us-east-1.aws.neon.tech",
+    "DB_PORT": "5432",
+    "JWT_SECRET": "Ej8p$2xK!7mLqZ@5vNfR*tYbAc3DgW6H9sTuV4X",
+    "JWT_EXPIRY": "1440",
+    "RATE_LIMIT": "60"
   }
 }
